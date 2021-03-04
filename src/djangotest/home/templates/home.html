@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+margin-left: auto;
+margin-right: auto;
+width: 8em
+{% block content %}
+<div class="cuerpo ms-auto me-auto border border-3" style="width: 60%; background-color: #5FB6B0;">
+    <h5 class="text-center" style="margin-top: 10px;">
+        Bienvenido querido visitante.
+    </h5>
+    <div style="margin-left: 10px; margin-right: 10px;"> 
+        <p style = "text-indent: 10px;">-En esta página básica puedes ingresar tu país de preferencia junto con sus grados respectivamente.<br>
+            La info que ingreses se guardará en la Base de Datos, no obstante, no se puede borrar en la misma página,
+            se tiene que ir a la base datos y de ahí se borra, ingresando un codigo para ejecutar cierta función.
+        </p>
+        <p style = "text-indent: 10px;">-Esta es mi primera página que desarrollé con lenguajes de programación diferentes y tambíen mezclados.
+            Aunque claramente no lo hice todo yo.
+        </p>
+        <p style = "text-indent: 10px;">-Ahora una lista de los lenguajes y programas que se utilizaron:</p>
+        <ul>
+            <li>HTML</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>Bootstrap</li>
+            <li>DBeaver</li>
+            <li>django</li>
+        </ul>
+    </div>
+</div>
+<style>
+    .cuerpo{
+        width:100%;
+        height:28rem;
+    }
+</style>
+{% endblock %}

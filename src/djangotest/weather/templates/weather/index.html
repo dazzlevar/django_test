@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="text-center" style="background-color: #5FB6B0;"> 
+  <br>
+  <h3 class="">Inserción de datos</h3>
+  <br>
+    <form action="" method="post">
+      {% csrf_token %}
+    <table class="d-grid gap-2 col-4 mx-auto">
+      {{ form }}
+    </table>
+    <br>
+    <div class="d-grid gap-2 col-1 d-md-flex mx-auto">
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    </div>
+    <br>
+    </form>
+</div>
+    <br>
+
+  <h4 class="d-grid gap-2 col-4 mx-auto text-center">Datos:</h4>
+
+    <br>
+
+  {% if weather_list %}
+
+  <table class="table-sm table table-dark table-striped container table-bordered border-dark">
+    <tr class="font-italic">
+      <th  scope="col-sm">Country name</th>
+      <th scope="col-sm" >Grades</th>
+    </tr>
+    {% for weather in weather_list %}
+      <tr>  
+        <td scope="col-sm">{{ weather.country_name }}</td>
+        <td scope="col-sm">{{ weather.grades }}</td>
+      </tr> 
+    {% endfor %}
+  </table>
+
+  
+{% else %}
+    <p>Me salio este mensaje y me asuste.</p>
+{% endif %}
+
+{% endblock content %}
